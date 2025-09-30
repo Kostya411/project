@@ -249,7 +249,8 @@ main {
 
 /*Для сообщения, заметок нету*/
 .no-notes-wrapper {
-    padding: 114px 164px 0;
+    padding: 114px 0 0;
+    text-align: center;
 }
 
 .no-notes-text {
