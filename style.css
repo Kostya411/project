@@ -1,0 +1,428 @@
+/*Обнуляем */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background: #fafafc;
+    min-width: 375px;
+}
+
+/*_____________header_________*/
+header {
+    padding: 18px 0;
+    box-shadow: 0 1px 3px 0 rgba(11, 12, 13, 0.16), 0 0 1px 0 rgba(11, 12, 13, 0.24);
+    background: #fff;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    max-width: 1182px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 15px;
+    /*border: 1px solid red;*/
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.quantity-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.quantity-text {
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: right;
+    color: #000;
+}
+
+.quantity-value {
+    font-weight: 700;
+}
+
+/*________________main____________*/
+
+main {
+    height: 100%;
+    padding: 24px 0;
+}
+
+.main-shadow {
+    border-radius: 4px;
+    box-shadow: 0 8px 12px 0 rgba(11, 12, 13, 0.08), 0 16px 24px 0 rgba(11, 12, 13, 0.04), 0 1px 2px 0 rgba(11, 12, 13, 0.08);
+    background: #fff;
+    padding: 0 24px;
+}
+
+.form-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 12px;
+    padding: 24px 0;
+    width: 100%;
+}
+
+.input-textarea-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.label-name-note, .label-textarea-note, fieldset legend {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 2;
+    color: #919191;
+    width: auto;
+}
+
+.input-name-note {
+    border: 1px solid #e8e8e8;
+    border-radius: 10px;
+    padding: 6px 12px;
+    width: 100%;
+    max-width: 344px;
+    height: 36px;
+}
+
+.textarea-note {
+    resize: none;
+    border: 1px solid #e8e8e8;
+    border-radius: 10px;
+    padding: 6px 12px;
+    width: 100%;
+    max-width: 848px;
+    height: 84px;
+}
+
+.input-name-note::placeholder, .textarea-note::placeholder {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71429;
+    color: #919191;
+}
+
+.input-name-note, .textarea-note {
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71429;
+    color: #000;
+
+    /*отключаем выделение*/
+
+
+}
+.input-name-note:focus, .textarea-note:focus {
+    outline: none;
+}
+
+.text-color-button-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 24px;
+    width: 100%;
+}
+
+.color-button-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.color-title-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    border: none;
+}
+
+.color-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    gap: 8px;
+    width: 212px;
+    height: 36px;
+}
+
+/*цветные кнопки*/
+/* Скрываем стандартные радио-кнопки */
+.radio-group input[type="radio"] {
+    display: none;
+}
+
+.custom-radio {
+    border-radius: 100%;
+    width: 24px;
+    height: 24px;
+}
+.yellow {
+    background: #f3db7d;;
+}
+.green {
+    background: #c2f37d;;
+}
+.blue {
+    background: #7de1f3;
+}
+.red {
+    background: #f37d7d;
+}
+.purple {
+    background: #e77df3;
+}
+
+.custom-radio:hover {
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.radio-group input[type="radio"]:checked + .custom-radio {
+    outline: 2px solid #457cdc;; /* или любой цвет и толщина */
+    outline-offset: 4px; /* отступ от кружка */
+}
+
+.button-add-note {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 8px;
+
+    border-radius: 10px;
+    padding: 6px 24px;
+    width: 233px;
+    height: 36px;
+    background: #457cdc;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.button-add-note span {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #fff;
+}
+
+/*________________section__________*/
+
+/*Для сообщения, заметок нету*/
+.no-notes-wrapper {
+    padding: 114px 164px 0;
+}
+
+.no-notes-text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    color: #000
+}
+
+/*Заметки*/
+
+/*Отобразить только избранное*/
+.checkbox-favorites-only-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end
+}
+.favorites-label {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 8px;
+}
+.favorites-only-text {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 2;
+    color: #000;
+}
+.favorites-only-checkbox {
+    width: 16px;
+    height: 16px;
+}
+
+#svg-favorites-on {
+    display: none;
+}
+
+#checkbox-favorites-only:checked ~ .favorites-label #svg-favorites-off {
+    display: none;
+}
+
+#checkbox-favorites-only:checked ~ .favorites-label #svg-favorites-on {
+    display: inline;
+}
+
+
+
+/*_______________________Notes area__________*/
+.note-button {
+    height: 16px;
+    width: 16px;
+}
+
+
+.notes-area-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    /*??????????????????????????????????????*/
+    gap: 23px;
+    align-items: flex-start;
+    padding-top: 12px;
+
+
+}
+
+.a-note {
+    width: 100%;
+    max-width: 368px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(11, 12, 13, 0.08), 0 8px 16px 0 rgba(11, 12, 13, 0.04), 0 1px 2px 0 rgba(11, 12, 13, 0.08);
+}
+
+.header-note-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px 10px 0 0;
+    padding: 12px;
+    gap: 12px;
+}
+
+.header-note {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #292515;
+    flex-grow: 1;
+}
+
+.note-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71429;
+    color: #000;
+    padding: 12px;
+    height: auto;
+}
+
+/*_________________Всплывающие уведомления____________*/
+.notification-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+    z-index: 1000;
+}
+
+.notification {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+
+    border-radius: 10px;
+    padding: 12px 24px;
+    height: 48px;
+
+    box-shadow: 0 8px 12px 0 rgba(11, 12, 13, 0.08), 0 16px 24px 0 rgba(11, 12, 13, 0.04), 0 1px 2px 0 rgba(11, 12, 13, 0.08);
+
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.71429;
+    color: #fff;
+}
+
+.notification.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.redNotification {
+    background: #f23d5b;
+}
+
+.greenNotification {
+    background: #47b27d;
+}
+
+.yellowNotification {
+    background: #eff37d;
+}
+
+.colorSymbolNotification {
+    stroke: #fff;
+}
+
+
+
+/*_________________Примерный адаптив*/
+
+@media screen and (max-width: 694px) {
+
+    .text-color-button-wrapper {
+        flex-direction: column;
+    }
+    .notes-area-wrapper {
+        justify-content: center;
+    }
+}
+
+
+
+
+
+
+

@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">-->
+<!--    <meta http-equiv="X-UA-Compatible" content="ie=edge">-->
+
+    <!--Подключаем файлы-->
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+    <!--Подключаем шрифты-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:wght@100..900&display=swap"
+          rel="stylesheet">
+
+    <title>Notes</title>
+</head>
+<body>
+<!--Хэдер где лого и счетчик количества заметок-->
+<header>
+    <div class="header-wrapper container">
+        <img src="./assets/images/📝Notes.svg" alt="logo">
+        <div class="quantity-wrapper">
+            <img src="./assets/images/notes_col.svg" alt="Notes_quantity">
+            <div class="quantity-text">
+                Всего заметок:
+                <span class="quantity-value"></span>
+            </div>
+        </div>
+    </div>
+</header>
+<!--Секция мэйн, где форма-->
+<main>
+    <div class="container">
+        <div class="main-shadow">
+            <form class="form-wrapper" id="form-note">
+                <div class="input-textarea-wrapper">
+                    <label class="label-name-note" for="nameNote">Название заметки</label>
+                    <input class="input-name-note" type="text" id="nameNote"
+                           placeholder="Напишите название новой заметки...">
+                </div>
+                <div class="text-color-button-wrapper">
+                    <div class="input-textarea-wrapper">
+                        <label class="label-textarea-note" for="textNote">Описание новой заметки</label>
+                        <textarea class="textarea-note" id="textNote"
+                                  placeholder="Напишите описание новой заметки..."></textarea>
+                    </div>
+                    <div class="color-button-wrapper">
+                        <!--                    Эти кружочки-->
+                        <fieldset class="color-title-wrapper">
+                            <legend>Выберите цвет заметки</legend>
+                            <div class="color-wrapper radio-group">
+                                <input type="radio" id="colorNoteYellow" value="yellow" name="colorNote">
+                                <label for="colorNoteYellow" class="custom-radio yellow"></label>
+                                <input type="radio" id="colorNoteGreen" value="green" name="colorNote">
+                                <label for="colorNoteGreen" class="custom-radio green"></label>
+                                <input type="radio" id="colorNoteBlue" value="blue" name="colorNote">
+                                <label for="colorNoteBlue" class="custom-radio blue"></label>
+                                <input type="radio" id="colorNoteRed" value="red" name="colorNote">
+                                <label for="colorNoteRed" class="custom-radio red"></label>
+                                <input type="radio" id="colorNotePurple" value="purple" name="colorNote">
+                                <label for="colorNotePurple" class="custom-radio purple"></label>
+                            </div>
+                        </fieldset>
+                        <button class="button-add-note" type="submit">
+                            <img src="./assets/images/plus-svgrepo-com%201.svg" alt="">
+                            <span>Добавить заметку</span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+
+<!--Секция, где отображаются заметки или отсутствие заметок не забываем чекбокс-->
+<section>
+    <div class="container list">
+
+        <!--************Для сообщения, заметок нету-->
+
+<!--                <div class="no-notes-wrapper">-->
+<!--                    <p class="no-notes-text">-->
+<!--                        У вас нет еще ни одной заметки-->
+<!--                        <br>-->
+<!--                        Заполните поля выше и создайте свою первую заметку!-->
+<!--                    </p>-->
+<!--                </div>-->
+
+        <!--Заметки -->
+<!--        <div>-->
+<!--            <form action="">-->
+<!--                <div class="checkbox-favorites-only-wrapper">-->
+<!--                    &lt;!&ndash;                    тут будем менять через js, временно заглушку&ndash;&gt;-->
+<!--                    <svg class="favorites-only-checkbox" width="24" height="24" viewBox="0 0 24 24"-->
+<!--                         xmlns="http://www.w3.org/2000/svg">-->
+<!--                        <path d="M3 19V5C3 3.89543 3.89543 3 5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19Z"-->
+<!--                              fill="#457CDC" stroke="#457CDC" stroke-width="2"/>-->
+<!--                        <path d="M7 13L10 16L18 8" stroke="white" stroke-width="2" stroke-linecap="round"-->
+<!--                              stroke-linejoin="round"/>-->
+<!--                    </svg>-->
+<!--                    <input type="checkbox" id="checkbox-favorites-only" style="display: none;">-->
+<!--                    <label for="checkbox-favorites-only" class="favorites-only-text">Показать только избранные заметки</label>-->
+<!--                </div>-->
+<!--            </form>-->
+<!--        </div>-->
+
+
+<!--        <div class="notes-area-wrapper">-->
+<!--            <div class="a-note ">-->
+<!--                <div class="header-note-wrapper yellow">-->
+<!--                    <h2 class="header-note">Flexbox(css)</h2>-->
+<!--                    <img id="favoriteButton" class="note-button" src="./assets/images/heart%20inactive.svg" alt="favorite-button">-->
+<!--                    <img id="deleteButton" class="note-button" src="./assets/images/delete.svg" alt="delete-button">-->
+<!--                </div>-->
+<!--                <p class="note-text">-->
+<!--                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, quibusdam.-->
+<!--                </p>-->
+<!--            </div>-->
+<!--        </div>-->
+    </div>
+    <div class="notification-container" id="notificationContainer"></div>
+</section>
+</body>
+</html>
