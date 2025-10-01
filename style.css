@@ -144,6 +144,7 @@ main {
 
 
 }
+
 .input-name-note:focus, .textarea-note:focus {
     outline: none;
 }
@@ -194,18 +195,23 @@ main {
     width: 24px;
     height: 24px;
 }
+
 .yellow {
     background: #f3db7d;;
 }
+
 .green {
     background: #c2f37d;;
 }
+
 .blue {
     background: #7de1f3;
 }
+
 .red {
     background: #f37d7d;
 }
+
 .purple {
     background: #e77df3;
 }
@@ -269,6 +275,7 @@ main {
     align-items: center;
     justify-content: flex-end
 }
+
 .favorites-label {
     display: flex;
     align-items: center;
@@ -276,12 +283,14 @@ main {
     flex-direction: row;
     gap: 8px;
 }
+
 .favorites-only-text {
     font-weight: 400;
     font-size: 12px;
     line-height: 2;
     color: #000;
 }
+
 .favorites-only-checkbox {
     width: 16px;
     height: 16px;
@@ -298,7 +307,6 @@ main {
 #checkbox-favorites-only:checked ~ .favorites-label #svg-favorites-on {
     display: inline;
 }
-
 
 
 /*_______________________Notes area__________*/
@@ -408,16 +416,22 @@ main {
 }
 
 
-
 /*_________________Примерный адаптив*/
-
+/*694*/
 @media screen and (max-width: 694px) {
 
     .text-color-button-wrapper {
         flex-direction: column;
     }
+
     .notes-area-wrapper {
         justify-content: center;
+    }
+
+    .favorites-only-checkbox,
+    .note-button {
+        width: 20px;
+        height: 20px;
     }
 }
 

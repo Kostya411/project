@@ -18,7 +18,7 @@
     <title>Notes</title>
 </head>
 <body>
-<!--Хэдер где лого и счетчик количества заметок-->
+<!--............................................................Хэдер где лого и счетчик количества заметок-->
 <header>
     <div class="header-wrapper container">
         <img src="./assets/images/📝Notes.svg" alt="logo">
@@ -31,7 +31,7 @@
         </div>
     </div>
 </header>
-<!--Секция мэйн, где форма-->
+<!--.................................................................Секция мэйн, где форма-->
 <main>
     <div class="container">
         <div class="main-shadow">
@@ -48,7 +48,7 @@
                                   placeholder="Напишите описание новой заметки..."></textarea>
                     </div>
                     <div class="color-button-wrapper">
-                        <!--                    Эти кружочки-->
+                        <!--.................................................................Эти кружочки-->
                         <fieldset class="color-title-wrapper">
                             <legend>Выберите цвет заметки</legend>
                             <div class="color-wrapper radio-group">
@@ -75,52 +75,12 @@
     </div>
 </main>
 
-<!--Секция, где отображаются заметки или отсутствие заметок не забываем чекбокс-->
+<!--.................................Секция, где отображаются заметки или отсутствие заметок не забываем чекбокс-->
 <section>
-    <div class="container list">
+    <!--.................................Тут будут заметки, чекбокс избранное, надпись (нет заметок) -->
+    <div class="container list"></div>
 
-        <!--************Для сообщения, заметок нету-->
-
-<!--                <div class="no-notes-wrapper">-->
-<!--                    <p class="no-notes-text">-->
-<!--                        У вас нет еще ни одной заметки-->
-<!--                        <br>-->
-<!--                        Заполните поля выше и создайте свою первую заметку!-->
-<!--                    </p>-->
-<!--                </div>-->
-
-        <!--Заметки -->
-<!--        <div>-->
-<!--            <form action="">-->
-<!--                <div class="checkbox-favorites-only-wrapper">-->
-<!--                    &lt;!&ndash;                    тут будем менять через js, временно заглушку&ndash;&gt;-->
-<!--                    <svg class="favorites-only-checkbox" width="24" height="24" viewBox="0 0 24 24"-->
-<!--                         xmlns="http://www.w3.org/2000/svg">-->
-<!--                        <path d="M3 19V5C3 3.89543 3.89543 3 5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19Z"-->
-<!--                              fill="#457CDC" stroke="#457CDC" stroke-width="2"/>-->
-<!--                        <path d="M7 13L10 16L18 8" stroke="white" stroke-width="2" stroke-linecap="round"-->
-<!--                              stroke-linejoin="round"/>-->
-<!--                    </svg>-->
-<!--                    <input type="checkbox" id="checkbox-favorites-only" style="display: none;">-->
-<!--                    <label for="checkbox-favorites-only" class="favorites-only-text">Показать только избранные заметки</label>-->
-<!--                </div>-->
-<!--            </form>-->
-<!--        </div>-->
-
-
-<!--        <div class="notes-area-wrapper">-->
-<!--            <div class="a-note ">-->
-<!--                <div class="header-note-wrapper yellow">-->
-<!--                    <h2 class="header-note">Flexbox(css)</h2>-->
-<!--                    <img id="favoriteButton" class="note-button" src="./assets/images/heart%20inactive.svg" alt="favorite-button">-->
-<!--                    <img id="deleteButton" class="note-button" src="./assets/images/delete.svg" alt="delete-button">-->
-<!--                </div>-->
-<!--                <p class="note-text">-->
-<!--                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, quibusdam.-->
-<!--                </p>-->
-<!--            </div>-->
-<!--        </div>-->
-    </div>
+    <!--.................................Уведомления, высплывающие -->
     <div class="notification-container" id="notificationContainer"></div>
 </section>
 </body>
